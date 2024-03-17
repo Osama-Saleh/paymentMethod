@@ -1,5 +1,6 @@
 import 'package:checkoutpayment/utils/app_styles.dart';
 import 'package:checkoutpayment/views/payment_view.dart';
+import 'package:checkoutpayment/widgets/app_card_type.dart';
 import 'package:checkoutpayment/widgets/card_price.dart';
 import 'package:checkoutpayment/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
@@ -67,9 +68,24 @@ class MyCardView extends StatelessWidget {
             CustomButton(
               title: 'Complete Payment',
               onPressed: () {
-               showModalBottomSheet(context: context, builder: (context) {
-                 return Text('data');
-               },);
+                showModalBottomSheet(
+                  context: context,
+                  builder: (context) {
+                    return Padding(
+                      padding:  EdgeInsets.symmetric(vertical: 20.h),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          AppCardType(),
+                          SizedBox(height: 15.h,),
+                          CustomButton(title: 'continue', onPressed: () {
+                            
+                          })
+                        ],
+                      ),
+                    );
+                  },
+                );
                 // Navigator.push(
                 //   context,
                 //   MaterialPageRoute(

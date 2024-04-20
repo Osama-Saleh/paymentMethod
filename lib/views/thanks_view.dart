@@ -10,9 +10,9 @@ class ThankView extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
           child: Padding(
-        padding: EdgeInsets.only(left: 20.w,right: 20.w,bottom: 20.w,top: 40.w),
+        padding:
+            EdgeInsets.only(left: 20.w, right: 20.w, bottom: 20.w, top: 40.w),
         child: Stack(
-          
           clipBehavior: Clip.none,
           children: [
             InformationThanksCard(),
@@ -35,7 +35,7 @@ class ThankView extends StatelessWidget {
               left: 0,
               bottom: 0.2.sh + 20,
               child: Padding(
-                padding:const EdgeInsets.symmetric(horizontal: 25),
+                padding: const EdgeInsets.symmetric(horizontal: 25),
                 child: Row(
                   children: List.generate(
                       20,
@@ -43,7 +43,7 @@ class ThankView extends StatelessWidget {
                             child: Container(
                               margin: const EdgeInsets.symmetric(horizontal: 1),
                               decoration: BoxDecoration(
-                                  color:const Color(0xffB8B8B8),
+                                  color: const Color(0xffB8B8B8),
                                   borderRadius: BorderRadius.circular(10.r)),
                               height: 2,
                             ),
@@ -75,4 +75,3 @@ class ThankView extends StatelessWidget {
     );
   }
 }
-

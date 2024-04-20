@@ -24,29 +24,34 @@ class _PaymentViewState extends State<PaymentView> {
           child: CustomScrollView(
         slivers: [
           const SliverToBoxAdapter(
-            child:  AppCardType(),
+            child: AppCardType(),
           ),
           SliverToBoxAdapter(
-            child:  CustomCreditCard(formKey: formKey,autovalidateMode: autovalidateMode),
+            child: CustomCreditCard(
+                formKey: formKey, autovalidateMode: autovalidateMode),
           ),
-          
           SliverFillRemaining(
             hasScrollBody: false,
-            child: Align(child: CustomButton(title: 'play',
-            
-            onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => ThankView(),));
-              // if(formKey.currentState!.validate()){
-              //   formKey.currentState!.save();
-              // }else{
-              //   autovalidateMode = AutovalidateMode.always;
-              //   setState(() {
-                  
-              //   });
-              // }
-            },)),
+            child: Align(
+                child: CustomButton(
+              title: 'play',
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ThankView(),
+                    ));
+                // if(formKey.currentState!.validate()){
+                //   formKey.currentState!.save();
+                // }else{
+                //   autovalidateMode = AutovalidateMode.always;
+                //   setState(() {
+
+                //   });
+                // }
+              },
+            )),
           ),
-          
         ],
       )),
     );

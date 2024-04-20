@@ -1,4 +1,6 @@
+import 'package:checkoutpayment/utils/api/api_service.dart';
 import 'package:checkoutpayment/utils/app_styles.dart';
+import 'package:checkoutpayment/utils/striper_service.dart';
 import 'package:checkoutpayment/views/payment_view.dart';
 import 'package:checkoutpayment/widgets/app_card_type.dart';
 import 'package:checkoutpayment/widgets/card_price.dart';
@@ -72,14 +74,16 @@ class MyCardView extends StatelessWidget {
                   context: context,
                   builder: (context) {
                     return Padding(
-                      padding:  EdgeInsets.symmetric(vertical: 20.h),
+                      padding: EdgeInsets.symmetric(vertical: 20.h),
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          AppCardType(),
-                          SizedBox(height: 15.h,),
+                          const AppCardType(),
+                          SizedBox(
+                            height: 15.h,
+                          ),
                           CustomButton(title: 'continue', onPressed: () {
-                            
+                            StriperService().createPaymentIntent();
                           })
                         ],
                       ),

@@ -27,7 +27,7 @@ class InformationThanksCard extends StatelessWidget {
               'Thank you!',
               style: AppStyles.weight500Size25,
             ),
-            Text( 
+            Text(
               'Your transaction was successful',
               style: AppStyles.weight400Size20,
               textAlign: TextAlign.center,
@@ -77,57 +77,73 @@ class InformationThanksCard extends StatelessWidget {
               style: AppStyles.weight600Size18,
               styleTitle: AppStyles.weight600Size18,
             ),
-            SizedBox(height: 30.h,),
+            SizedBox(
+              height: 30.h,
+            ),
             Container(
               height: 80.h,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(15.r),
               ),
-              
               child: Row(
                 children: [
                   Padding(
-                    padding:  EdgeInsets.only(left: 20.w),
-                    child: SvgPicture.asset('assets/svg/logomastercard.svg',
-                    height: 30.h,
-                    fit: BoxFit.fill,
+                    padding: EdgeInsets.only(left: 20.w),
+                    child: SvgPicture.asset(
+                      'assets/svg/logomastercard.svg',
+                      height: 30.h,
+                      fit: BoxFit.fill,
                     ),
                   ),
-                  SizedBox(width: 23.w,),
+                  SizedBox(
+                    width: 23.w,
+                  ),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('Credit Card',style: AppStyles.weight400Size18,),
-                      Text('Mastercard **78',style: AppStyles.weight400Size18.copyWith(
-                        color: Colors.black.withOpacity(0.7)
-                      ),),
+                      Text(
+                        'Credit Card',
+                        style: AppStyles.weight400Size18,
+                      ),
+                      Text(
+                        'Mastercard **78',
+                        style: AppStyles.weight400Size18
+                            .copyWith(color: Colors.black.withOpacity(0.7)),
+                      ),
                     ],
                   )
                 ],
               ),
             ),
-            SizedBox(height: 80.h,), 
+            SizedBox(
+              height: 80.h,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Icon(FontAwesomeIcons.barcode,size: 60.sp,),
+                Icon(
+                  FontAwesomeIcons.barcode,
+                  size: 60.sp,
+                ),
                 Container(
-                  padding: EdgeInsets.symmetric(vertical: 15.h, horizontal: 30.w),
+                  padding:
+                      EdgeInsets.symmetric(vertical: 15.h, horizontal: 30.w),
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15.r),
-                    border: Border.all(
-                      color:const Color(0xff34A853),
-                      width: 2.w,
-                    )
+                      borderRadius: BorderRadius.circular(15.r),
+                      border: Border.all(
+                        color: const Color(0xff34A853),
+                        width: 2.w,
+                      )),
+                  child: Text(
+                    'PAID',
+                    style: AppStyles.weight600Size24,
                   ),
-                  
-                  child: Text('PAID',style: AppStyles.weight600Size24,),
                 )
               ],
             )
-                      ],
+          ],
         ),
       ),
     );

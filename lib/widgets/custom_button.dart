@@ -19,6 +19,7 @@ class CustomButton extends StatelessWidget {
       padding: EdgeInsetsDirectional.symmetric(horizontal: 20.w),
       child: ElevatedButton(
           style: ButtonStyle(
+            // change color when pressed button 
             overlayColor: MaterialStateProperty.resolveWith(
               (states) {
                 return states.contains(MaterialState.pressed)
@@ -26,7 +27,7 @@ class CustomButton extends StatelessWidget {
                     : null;
               },
             ),
-            backgroundColor:const MaterialStatePropertyAll(Colors.green),
+            backgroundColor: const MaterialStatePropertyAll(Colors.green),
             shape: MaterialStateProperty.all(
               RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20),

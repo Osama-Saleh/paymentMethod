@@ -39,11 +39,17 @@ class AppCardType extends StatelessWidget {
                 padding: EdgeInsets.all(10.w),
                 decoration: BoxDecoration(
                   color: Colors.white,
-                  border: Border.all(color:paymentController.seleted==index ? Colors.green:Colors.grey, width:paymentController.seleted==index ?4: 2),
+                  border: Border.all(
+                      color: paymentController.seleted == index
+                          ? Colors.green
+                          : Colors.grey,
+                      width: paymentController.seleted == index ? 4 : 2),
                   borderRadius: BorderRadius.circular(15.r),
                   boxShadow: [
                     BoxShadow(
-                      color: paymentController.seleted==index ? Colors.green:Colors.grey,
+                      color: paymentController.seleted == index
+                          ? Colors.green
+                          : Colors.grey,
                       blurRadius: 4,
                     )
                   ],

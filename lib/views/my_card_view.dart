@@ -1,7 +1,9 @@
+import 'package:checkoutpayment/controller/payment_controller.dart';
 import 'package:checkoutpayment/utils/api/api_service.dart';
 import 'package:checkoutpayment/utils/app_styles.dart';
 import 'package:checkoutpayment/utils/striper_service.dart';
 import 'package:checkoutpayment/views/payment_view.dart';
+import 'package:checkoutpayment/views/thanks_view.dart';
 import 'package:checkoutpayment/widgets/app_card_type.dart';
 import 'package:checkoutpayment/widgets/card_price.dart';
 import 'package:checkoutpayment/widgets/custom_button.dart';
@@ -82,9 +84,19 @@ class MyCardView extends StatelessWidget {
                           SizedBox(
                             height: 15.h,
                           ),
-                          CustomButton(title: 'continue', onPressed: () {
-                            StriperService().createPaymentIntent();
-                          })
+                          CustomButton(
+                              title: 'continue',
+                              onPressed: () async {
+                                await PaymentController().makePaymentIntent(
+                                  amount: 300,
+                                  currency: 'USD',
+                                );
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => ThankView(),
+                                    ));
+                              })
                         ],
                       ),
                     );
